@@ -12,6 +12,8 @@ let misDatos={
 }
 console.log(misDatos.saludar());
 
+
+
 let auto={
     marca:"Toyota",
     modelo:"Hilux",
@@ -29,13 +31,53 @@ auto.avanzar(100);
 auto.retroceder(50)
 console.log(auto.posicion);
 
+
+
 let nuevoAuto={
-    marca:"Toyota",
-    modelo:"Hilux",
-    anio: "2024",
-    color:"Blanco",
+    marca:"Ferrari",
+    modelo:"488 GTB",
+    anio: "2019",
+    color:"Violeta",
     posicion:0,
     moverse (n) {
-        this.posicion 
+        this.posicion += n;
     } 
 }
+
+nuevoAuto.moverse(697)
+nuevoAuto.moverse(-97)
+console.log(nuevoAuto.posicion);
+
+
+
+let ironMan={
+    nombre: "Iron Man",
+    team: "Avengers",
+    powers: ["Volar", "Lanzar misiles", "Disparar láser"],
+    energy: 100,
+    getPower (parametro) {
+        this.energy -= 50
+            return `Personaje elegido:${this.nombre}.
+            Poder elegido es: ${this.powers[0]}. 
+            Energía restante: ${this.energy}.
+            Estado: Critico y pertene al team de los ${this.team}`;
+    }
+}
+
+console.log(ironMan.getPower(2)); 
+
+let hulk = {
+    nombre: "Hulk",
+    team: "Avengers",
+    powers: ["Aplastar", "`Gritar`", "Golpear"],
+    energy: 100,
+    getPower (parametro) {
+        this.energy -= 20;
+        return `Personaje elegido: ${this.nombre}.
+        Poder elegido es: ${this.powers[2]}. 
+        Energía restante: ${this.energy}.
+        Estado: en mejores condiciones y pertene al team de los ${this.team}`;
+    }
+    }
+
+console.log(hulk.getPower(3)); 
